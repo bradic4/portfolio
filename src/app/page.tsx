@@ -9,11 +9,13 @@ import ExperienceSection from "@/components/sections/experience";
 import ProjectsSection from "@/components/sections/projects";
 import ContactSection from "@/components/sections/contact";
 import HeroSection from "@/components/sections/hero";
+import AnimatedBackground from "@/components/animated-background";
 
 function MainPage() {
   return (
     <SmoothScroll>
-      <Particles className="fixed inset-0 pointer-events-none" quantity={100} ease={80} color="#ffffff" refresh />
+      <Particles className="fixed inset-0 pointer-events-none" quantity={100} ease={80} refresh />
+      <AnimatedBackground />
       <main className={cn("bg-slate-100 dark:bg-transparent canvas-overlay-mode")}>
         <HeroSection />
         <SkillsSection />
