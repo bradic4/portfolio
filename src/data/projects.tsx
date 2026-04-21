@@ -580,8 +580,8 @@ const projects: Project[] = [
     id: "portfolio",
     category: "Portfolio",
     title: "My Portfolio",
-    src: "/assets/seo/og-image.png",
-    screenshots: ["1.png"],
+    src: "/assets/projects-screenshots/portfolio/landing.png",
+    screenshots: ["landing.png", "projects.png", "skills.png", "project.png", "navbar.png"],
     live: "https://ivanbradic.dev",
     skills: {
       frontend: [
