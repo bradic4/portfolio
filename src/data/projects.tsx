@@ -272,7 +272,6 @@ const projects: Project[] = [
         PROJECT_SKILLS.sql,
       ],
     },
-    github: "https://github.com/bradic4/reporting-engine",
     get content() {
       return (
         <div>
@@ -342,6 +341,7 @@ const projects: Project[] = [
         PROJECT_SKILLS.sockerio,
       ],
     },
+    live: "https://www.codingducks.xyz/",
     get content() {
       return (
         <div>
@@ -425,6 +425,7 @@ const projects: Project[] = [
     title: "Coupon Luxury",
     src: "/assets/projects-screenshots/couponluxury/landing.png",
     screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
+    live: "https://www.couponluxury.com/",
     skills: {
       frontend: [
         PROJECT_SKILLS.js,
@@ -515,6 +516,7 @@ const projects: Project[] = [
     title: "The Booking Desk",
     src: "/assets/projects-screenshots/the-booking-desk/landing.png",
     screenshots: ["1.png"],
+    live: "https://thebookingdesk.com/",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -580,6 +582,7 @@ const projects: Project[] = [
     title: "My Portfolio",
     src: "/assets/seo/og-image.png",
     screenshots: ["1.png"],
+    live: "https://ivanbradic.dev",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
