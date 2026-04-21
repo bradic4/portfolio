@@ -2,10 +2,10 @@
 import Image from "next/image";
 import React from "react";
 import {
-  ResponsiveDialog,
-  ResponsiveDialogContent,
-  ResponsiveDialogTrigger,
-} from "../ui/responsive-dialog";
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "../ui/dialog";
 import { FloatingDock } from "../ui/floating-dock";
 import { ScrollArea } from "../ui/scroll-area";
 import Link from "next/link";
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
       <SectionHeader id="projects" title="Projects" />
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -33,8 +33,8 @@ const ProjectsSection = () => {
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="flex items-center justify-center">
-      <ResponsiveDialog>
-        <ResponsiveDialogTrigger className="bg-transparent flex justify-center">
+      <Dialog>
+        <DialogTrigger className="bg-transparent flex justify-center">
           <div
             className="relative w-[400px] h-auto rounded-lg overflow-hidden"
             style={{ aspectRatio: "3/2" }}
@@ -55,9 +55,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
             </div>
           </div>
-        </ResponsiveDialogTrigger>
+        </DialogTrigger>
 
-        <ResponsiveDialogContent className="md:max-w-4xl md:h-[85vh] md:!flex md:flex-col md:overflow-hidden md:p-0 md:gap-0">
+        <DialogContent className="md:max-w-4xl md:h-[85vh] md:!flex md:flex-col md:overflow-hidden md:p-0 md:gap-0 max-h-[85vh] flex flex-col p-0 gap-0 overflow-hidden text-left border bg-background sm:rounded-lg">
           {/* Sticky header */}
           <div className="shrink-0 border-b border-border bg-background/80 backdrop-blur-sm px-8 py-5">
             <div className="flex items-center justify-between gap-4">
@@ -133,8 +133,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </div>
           </ScrollArea>
 
-        </ResponsiveDialogContent>
-      </ResponsiveDialog>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

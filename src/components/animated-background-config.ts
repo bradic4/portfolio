@@ -136,8 +136,8 @@ export const getKeyboardState = ({
       : width / DESKTOP_REF_WIDTH;
 
     // Clamp values to prevent extremes
-    const minScale = isMobile ? 0.5 : 0.5;
-    const maxScale = isMobile ? 0.6 : 1.15;
+    const minScale = isMobile ? 0.35 : 0.5;
+    const maxScale = isMobile ? 0.45 : 1.15;
 
     return Math.min(Math.max(targetScale, minScale), maxScale);
   };
