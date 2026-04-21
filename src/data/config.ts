@@ -23,7 +23,7 @@ const config = {
     "OOP",
   ],
   author: "Ivan Bradic",
-  email: "ivan.bradic@email.com",
+  email: "ivanbradic46@gmail.com",
   site: "https://ivanbradic.dev",
 
   // for github stars button

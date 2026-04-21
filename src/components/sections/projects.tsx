@@ -57,7 +57,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </DialogTrigger>
 
-        <DialogContent className="md:max-w-4xl md:h-[85vh] md:!flex md:flex-col md:overflow-hidden md:p-0 md:gap-0 max-h-[85vh] flex flex-col p-0 gap-0 overflow-hidden text-left border bg-background sm:rounded-lg">
+        <DialogContent className="max-w-4xl w-[95vw] h-[85vh] flex flex-col p-0 gap-0 overflow-hidden text-left border bg-background sm:rounded-lg">
           {/* Sticky header */}
           <div className="shrink-0 border-b border-border bg-background/80 backdrop-blur-sm px-8 py-5">
             <div className="flex items-center justify-between gap-4">
