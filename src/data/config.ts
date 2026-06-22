@@ -1,15 +1,14 @@
 const config = {
-  title: "Ivan Bradic | Junior Software Engineer",
+  title: "Ivan Bradic | Software Engineer",
   description: {
-    long: "Explore the portfolio of Ivan Bradic, a junior software engineer with strong web development experience. Specializing in C#/.NET backend systems, API integration, data processing, and modern web applications built with React and Next.js. Discover projects spanning software engineering and interactive web experiences.",
+    long: "Explore the portfolio of Ivan Bradic, a software engineer with strong web development experience. Specializing in C#/.NET backend systems, API integration, data processing, and modern web applications built with React and Next.js. Discover projects spanning software engineering and interactive web experiences.",
     short:
-      "Portfolio of Ivan Bradic — junior software engineer building backend systems, APIs, and modern web applications.",
+      "Portfolio of Ivan Bradic — software engineer building backend systems, APIs, and modern web applications.",
   },
   keywords: [
     "Ivan Bradic",
     "portfolio",
     "software engineer",
-    "junior software engineer",
     "C#",
     ".NET",
     "API development",
