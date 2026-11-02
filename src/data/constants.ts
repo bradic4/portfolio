@@ -320,6 +320,28 @@ export type Experience = {
 
 export const EXPERIENCE: Experience[] = [
   {
+    id: 3,
+    startDate: "May 2026",
+    endDate: "Present",
+    title: "SEO Specialist",
+    company: "Lemon Planet DOO (VolimSvojDom.rs)",
+    description: [
+      "Lead organic search strategy for a large e-commerce catalog, prioritizing technical SEO, category visibility, and search performance.",
+      "Analyze organic traffic, search rankings, and landing-page performance using Google Analytics 4 and Google Search Console reports.",
+      "Conduct keyword research and optimize category and product pages with useful, search-intent-focused content and internal linking.",
+      "Investigate crawling, indexing, site migration, and technical performance issues, and coordinate improvements within the MerchantPro platform.",
+      "Plan and publish SEO content clusters, then monitor their organic visibility and ranking trends."
+    ],
+    skills: [
+      SkillNames.SEMRUSH,
+      SkillNames.GA,
+      SkillNames.GTM,
+      SkillNames.HTML,
+      SkillNames.JS,
+    ],
+  },
+
+  {
     id: 1,
     startDate: "Oct 2024",
     endDate: "Dec 2025",
