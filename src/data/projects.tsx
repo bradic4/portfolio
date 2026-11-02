@@ -259,6 +259,50 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: "smart-deferral",
+    category: "Web Performance Engineering",
+    title: "Smart Deferral",
+    src: "/assets/projects-screenshots/smart-deferral/landing.svg",
+    screenshots: ["landing.svg"],
+    skills: {
+      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.ts],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Make heavy e-commerce JavaScript lighter, without sacrificing critical functionality.
+          </TypographyP>
+          <TypographyP className="font-mono">
+            Smart Deferral is a performance optimization engine designed to reduce main-thread blocking from non-essential third-party JavaScript on e-commerce websites. Instead of indiscriminately removing scripts, it defers their execution intelligently while preserving critical shopping interactions and tracking.
+          </TypographyP>
+          <TypographyH3 className="my-4 mt-8">Measured Performance Gains</TypographyH3>
+          <p className="font-mono mb-2">
+            In controlled mobile benchmarks on a real e-commerce storefront, the optimized configuration reduced median Total Blocking Time from approximately 12.8 seconds to 6.9 seconds, a 46% improvement. JavaScript transfer in one tested configuration fell from 1.396 MB to 0.316 MB, a 77% reduction. Results are test-specific, not guarantees for every website.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Smart Script Scheduling</TypographyH3>
+          <p className="font-mono mb-2">
+            The engine targets expensive non-essential scripts, including analytics and marketing integrations, and postpones their execution to free up the browser main thread. The approach is designed to protect the page's initial experience while retaining essential functionality.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Tracking and Interaction Safety</TypographyH3>
+          <p className="font-mono mb-2">
+            Deferral logic includes event handling for critical interactions such as add-to-cart, safeguards for tracking continuity, and an explicit kill switch to disable optimization during diagnosis. The test suite passed 89 of 89 checks in the recorded validation run.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Production Canary Validation</TypographyH3>
+          <p className="font-mono mb-2">
+            Built with controlled rollout and observability in mind, Smart Deferral was evaluated through canary experiments, server-side logging, and monitoring dashboards. A monitored live test covered approximately 15,000 sessions with no reported errors in that test window.
+          </p>
+          <TypographyH3 className="my-4 mt-8">Engineering Approach</TypographyH3>
+          <p className="font-mono mb-2">
+            Performance is treated as an engineering problem, not a Lighthouse score chase: measure script cost, isolate bottlenecks, test behavior under realistic conditions, preserve conversions and analytics, and roll back safely when needed.
+          </p>
+        </div>
+      );
+    },
+  },
+
+  {
     id: "marketing-dashboard",
     category: "Software Engineering",
     title: "Marketing Analytics Dashboard",
