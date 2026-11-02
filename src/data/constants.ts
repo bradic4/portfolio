@@ -32,6 +32,8 @@ export enum SkillNames {
   SEMRUSH = "semrush",
   GA = "google_analytics",
   GTM = "gtm",
+  GSC = "gsc",
+  AHREFS = "ahrefs",
 }
 export type Skill = {
   id: number;
@@ -298,6 +300,22 @@ using use = useUsing("use")`,
     color: "#e37400",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
   },
+  [SkillNames.GSC]: {
+    id: 33,
+    name: "gsc",
+    label: "Google Search Console",
+    shortDescription: "Search performance, indexing, and organic visibility",
+    color: "#4285f4",
+    icon: "https://cdn.simpleicons.org/googlesearchconsole",
+  },
+  [SkillNames.AHREFS]: {
+    id: 34,
+    name: "ahrefs",
+    label: "Ahrefs",
+    shortDescription: "Keyword research, backlink analysis, and competitive SEO",
+    color: "#ff8800",
+    icon: "https://cdn.simpleicons.org/ahrefs",
+  },
   [SkillNames.GTM]: {
     id: 32,
     name: "gtm",
@@ -324,7 +342,7 @@ export const EXPERIENCE: Experience[] = [
     startDate: "May 2026",
     endDate: "Present",
     title: "SEO Specialist",
-    company: "Lemon Planet DOO (VolimSvojDom.rs)",
+    company: "Lemon Planet DOO",
     description: [
       "Lead organic search strategy for a large e-commerce catalog, prioritizing technical SEO, category visibility, and search performance.",
       "Analyze organic traffic, search rankings, and landing-page performance using Google Analytics 4 and Google Search Console reports.",
@@ -335,9 +353,8 @@ export const EXPERIENCE: Experience[] = [
     skills: [
       SkillNames.SEMRUSH,
       SkillNames.GA,
-      SkillNames.GTM,
-      SkillNames.HTML,
-      SkillNames.JS,
+      SkillNames.GSC,
+      SkillNames.AHREFS,
     ],
   },
 
