@@ -20,18 +20,18 @@ const HeroSection = () => {
   const { isLoading } = usePreloader();
 
   return (
-    <SectionWrapper id="hero" className="w-full min-h-[100dvh]">
+    <SectionWrapper id="hero" className={cn("relative w-full h-screen")}>
       <div className="grid md:grid-cols-2">
         <div
           className={cn(
-            "min-h-[calc(100dvh-3rem)] md:min-h-[calc(100dvh-4rem)] z-[2]",
+            "h-[calc(100dvh-3rem)] md:h-[calc(100dvh-4rem)] z-[2]",
             "col-span-1",
             "flex flex-col justify-start md:justify-center items-center md:items-start",
-            "px-6 pt-24 pb-24 md:p-20 lg:p-24 xl:p-28"
+            "pt-28 sm:pb-16 md:p-20 lg:p-24 xl:p-28"
           )}
         >
-          <div className="flex w-full max-w-xl flex-col">
-            {!isLoading && (
+          {!isLoading && (
+            <div className="flex flex-col">
               <div>
                 <BlurIn delay={0.7}>
                   <p
@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <BlurIn delay={1}>
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
-                      <p
+                      <h1
                         className={cn(
                           "-ml-[6px] leading-none font-thin text-transparent text-slate-800 text-left",
                           "font-thin text-7xl md:text-7xl lg:text-8xl xl:text-9xl",
@@ -58,7 +58,7 @@ const HeroSection = () => {
                         {config.author.split(" ")[0]}
                         <br className="md:block hiidden" />
                         {config.author.split(" ")[1]}
-                      </p>
+                      </h1>
                     </TooltipTrigger>
                     <TooltipContent
                       side="top"
@@ -68,19 +68,28 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                 </BlurIn>
+                {/* <div className="md:block hidden bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 w-screen h-px animate-fade-right animate-glow" /> */}
+                <BlurIn delay={1.2}>
+                  <p
+                    className={cn(
+                      "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400",
+                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                    )}
+                  >
+                    Software Engineer
+                  </p>
+                </BlurIn>
+                <BlurIn delay={1.5}>
+                  <p
+                    className={cn(
+                      "md:self-start font-thin text-sm text-slate-400 dark:text-zinc-500",
+                      "cursor-default font-display sm:text-base md:text-base whitespace-nowrap bg-clip-text "
+                    )}
+                  >
+                    with strong web development experience
+                  </p>
+                </BlurIn>
               </div>
-            )}
-            <div className="mt-5 space-y-2 font-sans">
-              <h1 className="text-xl font-semibold leading-snug text-slate-900 dark:text-zinc-100 sm:text-2xl">
-                Custom software development for small businesses and agencies
-              </h1>
-              <p className="text-sm leading-relaxed text-slate-600 dark:text-zinc-300 sm:text-base">
-                I build internal tools, dashboards, and API integrations for
-                businesses, and take on scoped C#/.NET and front-end work for
-                agency teams.
-              </p>
-            </div>
-            {!isLoading && (
               <div className="mt-8 flex flex-col gap-3 w-fit">
                 <Link
                   href={
@@ -134,8 +143,8 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
         <div className="grid col-span-1"></div>
       </div>
